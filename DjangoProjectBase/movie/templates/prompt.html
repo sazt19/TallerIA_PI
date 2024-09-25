@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="container">  <!-- mejora el espaciado de la pagina-->
+    <form action=""> <!-- especifica que al hacer clic en enviar, enviamos el formulario a la misma página-->
+        <div class="mb-3"> <!--agrega espacio inferior de 3 unidades-->
+            <label for="searchMovie" class="form-label"> <!--asocia un texto descriptivo con un campo de entrada en un formulario-->
+                Search for Movie:
+            </label>
+            <input type="text" class="form-control" name="searchMovie"/>
+        </div>
+        <button type="submit" class="btn btn-primary">Search</button>
+    </form>
+    <p>Searching for: {{searchTerm}}</p>
+    <div class="row row-cols-1 row-cols-md-3 g-4"> <!-- define una fila en una cuadrícula con una columna en pantallas extra pequeñas y tres columnas en pantallas grandes-->
+    </div>
+</div>
+
+{% endblock content %}

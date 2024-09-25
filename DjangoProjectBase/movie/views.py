@@ -27,8 +27,11 @@ def about(request):
     return render(request, 'about.html')
 
 def signup(request):
-    email = request.GET.get('email') 
+    email = request.GET.get('email')
     return render(request, 'signup.html', {'email':email})
+
+def prompt(request):
+    return render(request, 'prompt.html')
 
 
 def statistics_view0(request):
